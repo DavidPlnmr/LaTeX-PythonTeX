@@ -88,6 +88,10 @@ plt.savefig('img/plot.png',bbox_inches='tight')
 \includepythongraphics{img/plot.png}
 ```
 Make sure to use the special command `\includepythongraphics{} ` to include the plot in the LaTeX document.
+You can also add options to the command, such as the width of the plot:
+```latex
+\includepythongraphics[width=0.5\textwidth]{img/plot.png}
+```
 
 ## Compilation
 ### Makefile
