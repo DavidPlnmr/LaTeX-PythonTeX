@@ -17,4 +17,12 @@
 % and to modify the existing ones
 % ============================
 
-\newcommand{\includepythongraphics}[1]{\IfFileExists{#1}{\includegraphics{#1}}{}}
+% Command \includepythongraphics with options
+\newcommand{\includepythongraphics}[2][]{%
+    \IfFileExists{#2}{%
+        \includegraphics[#1]{#2}%
+    }{%
+        % Error message if image not found
+        \textbf{Image not found:} #2%
+    }%
+}

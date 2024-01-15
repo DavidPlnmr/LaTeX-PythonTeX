@@ -17,14 +17,15 @@ from matplotlib.pylab import plt
 % Generation of LaTeX Code based on a DataFrame
 \begin{pycode}
 df_head = df.head(10)
-latex_table = df_head.to_latex()
+latex_table = df_head.to_latex(index=False, escape=False)
 \end{pycode}
     
 % Show the generated table
-The generated table is :
-\begin{center}
+\begin{table}
+\centering
 \pyc{print(latex_table)}
-\end{center}
+\caption{The generated table}
+\end{table}
 
 
 % This block allows you to use python instructions but not printing the code in the document.
@@ -55,8 +56,12 @@ plt.plot(x , a*x+b)
 plt.savefig('img/graphique.png',bbox_inches='tight')
 \end{pycode}
 
+\begin{figure}
+    \includepythongraphics[width=0.2\textwidth]{img/graphique.png}
+    \caption{The generated graph}
+\end{figure}
 
-\includepythongraphics{img/graphique.png}
+
 
 
 \vspace{5em}
