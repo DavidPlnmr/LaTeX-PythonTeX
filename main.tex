@@ -1,0 +1,83 @@
+\documentclass[11pt]{article}% 
+
+% Import the packages and the commands
+\input{main.mydef.tex}
+
+\begin{document}
+
+\begin{pycode}
+import math
+import numpy as np
+from matplotlib.pylab import plt    
+\end{pycode}
+
+% If you execute an external script. Make sure that the path to any files are relative to the main.tex file.
+\pyc{exec(open('sources/script.py').read())}
+
+% Generation of LaTeX Code based on a DataFrame
+\begin{pycode}
+df_head = df.head(10)
+latex_table = df_head.to_latex()
+\end{pycode}
+    
+% Show the generated table
+The generated table is :
+\begin{center}
+\pyc{print(latex_table)}
+\end{center}
+
+
+% This block allows you to use python instructions but not printing the code in the document.
+% Make sure to not indent the python code like you would do in LaTeX.
+% Keep the indent of the python code as it is in the python file.
+\begin{pycode}
+x = math.sqrt(987.27)
+# print("Square root :",  x)
+\end{pycode}
+
+\vspace{5em}
+
+% The \py{} command allows you to write a python instruction without creating a LaTeX block.
+The variable is $x=\py{x}$
+
+
+\begin{pycode}
+x = np.linspace(5,6,100)
+# List of points :
+xx = [5.13 , 5.7, 5.48, 5.7, 5.66, 5.84, 5.5, 5.69, 5.44, 5.84, 5.82, 5.88, 5.61, 5.65, 5.21, 5.37, 5.46, 5.33, 5.15, 5.74]
+yy = [19.47, 21.67, 20.98, 21.46 , 21.6, 22.29, 20.84, 21.46, 20.8, 21.56, 22.02 , 22.54, 21.2, 21.39, 20.49, 20.46, 20.72, 20.07 , 20.24, 21.6]
+
+# Make sure to be good with matplotlib and numpy to have a good result
+plt.figure(figsize=(4,4), dpi=100)
+a,b = np.polyfit(xx , yy , 1)
+plt.plot(xx , yy , "o")
+plt.plot(x , a*x+b)
+plt.savefig('img/graphique.png',bbox_inches='tight')
+\end{pycode}
+
+
+\includepythongraphics{img/graphique.png}
+
+
+\vspace{5em}
+
+% This block allows you to use python instructions and printing the code in the document.
+% Notes :
+% - The variables, functions and libs aren't share between pycode and pyconsole.
+% - The python code is executed in a console, like you'll do in the terminal.
+\begin{pyconsole}
+# Let's see the behavior of the python console
+# You'll see that x is not defined
+print(x)
+result = 0
+print("result =", result)
+for i in range(10):
+    result += i
+
+print("result =", result)
+# Make sure to add a blank line at the 
+# end of the python code, specially if you use a for loop.
+\end{pyconsole}
+
+
+\end{document}

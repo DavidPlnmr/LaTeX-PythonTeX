@@ -1,0 +1,31 @@
+# LaTeX build files
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+*.toc
+
+# LaTeX distribution files
+*.pdf
+*.dvi
+*.ps
+
+# LaTeX editor files
+*.swp
+*.synctex(busy)
+*.synctex.gz(busy)
+*.synctex.gz(busy_uncompressed)
+*.synctex(busy_uncompressed)
+*.pdfsync
+
+# LaTeX generated files
+/_minted-*/
+
+# Pythontex files
+*.pytxcode
+*.pytxmcr
+pythontex-files-*/

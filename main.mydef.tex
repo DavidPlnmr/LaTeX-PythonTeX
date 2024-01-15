@@ -1,0 +1,20 @@
+
+% main.mydef.tex
+
+% ============================
+% Packages
+%
+% Feel free to add your own packages
+% ============================
+\usepackage{pythontex} % Used to compile Python code within LaTeX
+\usepackage{nopageno} % Used to remove the number of page in the document
+\usepackage{graphicx} % Used to include images in the document
+\usepackage{booktabs} % Used to make tables, specially the ones exported from pandas
+% ============================
+% Commands
+%
+% Feel free to add your own commands
+% and to modify the existing ones
+% ============================
+
+\newcommand{\includepythongraphics}[1]{\IfFileExists{#1}{\includegraphics{#1}}{}}
