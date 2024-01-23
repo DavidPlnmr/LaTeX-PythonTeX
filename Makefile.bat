@@ -4,6 +4,12 @@ set PYTHONTEX=pythontex
 set FILE_NAME=main
 set MAIN_TEX_FILE=%FILE_NAME%.tex
 
+rem Vérifier quel est le paramètre passé et appeler la règle correspondante
+if "%1"=="" goto all
+if "%1"=="pdf" goto pdf
+if "%1"=="clean" goto clean
+
+
 rem Cible par défaut
 :all
 call :pdf
