@@ -119,3 +119,15 @@ Make sure to modify the Makefile if you want to change the name of the LaTeX doc
 ### Others
 It might be possible to compile the LaTeX document mixed with Python using MiKTeX 
 
+## Known issues
+By using this template on Windows with MiKTeX, you can have a problem with some LaTeX packages. Make sure to install the packages asked when you run the LaTeX document for the first time. Otherwise, you can install them manually by using the MiKTeX console.
+
+This template is not compatible with Overleaf. You can find more information about it [here](https://www.overleaf.com/learn/how-to/Overleaf_v2_FAQ).
+
+You can also have some problems with the compilation if you use a different LaTeX compiler than the one I used. Make sure to modify the Makefile if you want to use a different LaTeX compiler and to do the correct modifications in the LaTeX document.
+
+Finally, make sure to have the good libraries installed for Python if you run this template at the first time. You can find the list of the libraries in the file `requirements.txt`. You can install them by using the following command:
+```bash
+pip install -r requirements.txt
+```
+
