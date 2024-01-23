@@ -96,16 +96,26 @@ You can also add options to the command, such as the width of the plot:
 ## Compilation
 ### Makefile
 For the compilation, I made a Makefile to simplify the process. You can use the following command to compile the LaTeX document:
+**Linux**
 ```bash
 make
 ```
+**Windows**
+```bash
+Makefile.bat
+```
 
 If you want to clean the directory, you can use the following command:
+**Linux**
 ```bash
 make clean
 ```
+**Windows**
+```bash
+Makefile.bat clean
+```
 
-Make sure to modify the Makefile if you want to change the name of the LaTeX document and if you're using a different LaTeX compiler.
+Make sure to modify the Makefile if you want to change the name of the LaTeX document and if you're using a different LaTeX compiler. Also, depending on your OS, make sure to use and modify the correct Makefile.
 ### Others
 It might be possible to compile the LaTeX document mixed with Python using MiKTeX 
 
