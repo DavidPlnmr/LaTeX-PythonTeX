@@ -38,8 +38,8 @@ x = math.sqrt(987.27)
 
 \vspace{5em}
 
-% The \py{} command allows you to write a python instruction without creating a LaTeX block.
-The variable is $x=\py{x}$
+% The \pyc{} command allows you to write a python instruction without creating a LaTeX block.
+The variable is $x=\pyc{x}$
 
 
 \begin{pycode}
@@ -73,7 +73,7 @@ plt.savefig('img/graphique.png',bbox_inches='tight')
 \begin{pyconsole}
 # Let's see the behavior of the python console
 # You'll see that x is not defined
-print(x)
+# print(x)
 result = 0
 print("result =", result)
 for i in range(10):
@@ -84,5 +84,8 @@ print("result =", result)
 # end of the python code, specially if you use a for loop.
 \end{pyconsole}
 
+\begin{pyverbatim}
+# This block allows you to write python code without executing it.
+\end{pyverbatim}
 
 \end{document}
