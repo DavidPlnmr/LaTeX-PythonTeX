@@ -1,4 +1,6 @@
 # LaTeX - PythonTeX
+This template comes from the GitHub repository: 
+https://github.com/DavidPlnmr/LaTeX-PythonTeX
 ## Description
 This is a template for using PythonTeX with LaTeX. This can be used to create a report or a presentation by mixing LaTeX and Python code. The Python code is executed when the LaTeX document is compiled. The output of the Python code is then inserted into the LaTeX document. This allows for the creation of dynamic LaTeX documents.
 ## Requirements
