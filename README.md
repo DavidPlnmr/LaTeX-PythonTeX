@@ -102,7 +102,7 @@ make
 ```
 **Windows**
 ```bash
-Makefile.bat
+./Makefile.bat
 ```
 
 If you want to clean the directory, you can use the following command:
@@ -112,7 +112,7 @@ make clean
 ```
 **Windows**
 ```bash
-Makefile.bat clean
+./Makefile.bat clean
 ```
 
 Make sure to modify the Makefile if you want to change the name of the LaTeX document and if you're using a different LaTeX compiler. Also, depending on your OS, make sure to use and modify the correct Makefile.
